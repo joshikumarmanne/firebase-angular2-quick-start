@@ -8,7 +8,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 # Clone this repository
 git clone https://github.com/joshikumarmanne/firebase-angular2-quick-start.git
 # Go into the repository
-cd firebaseAngular2Basic
+cd firebase-angular2-quick-start
 # Install dependencies
 npm install
 # Run the app
