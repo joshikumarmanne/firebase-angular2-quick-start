@@ -1,0 +1,21 @@
+<div class="mdl-layout__container">
+  <div mdl class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
+    <header class="mdl-layout__header mdl-color--teal-800">
+      <div class="mdl-layout__header-row">
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+      </div>
+    </header>
+    <div class="mdl-layout__drawer mdl-color--brown-800">
+      <span class="mdl-layout-title"><a routerLink="/" class="mdl-color-text--white"><i><b>SkillMapped</b></i></a></span>
+      <!-- Navigation. We show it in small screens. -->
+    </div>
+    <main class="mdl-layout__content">
+      <div class="content mdl-grid mdl-grid--no-spacing">
+          <main style="flex: 1;">
+            <router-outlet></router-outlet>
+          </main>
+      </div>
+    </main>
+  </div>
+</div>

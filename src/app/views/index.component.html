@@ -1,0 +1,51 @@
+<div class="mdl-grid" style="max-width: 900px; margin: auto">
+    <div class="mdl-cell mdl-cell--6-col">
+        <b>Tasks</b>
+        <ul class="demo-list-item mdl-list">
+            <li class="mdl-list__item" *ngFor="let task of taskAssignUsers; let index = index">
+                <span class="mdl-list__item-primary-content">
+                    {{index+1}}. {{ task.title }}  <span *ngIf="task.user"><small>(Assigned to: {{task.user.name}})</small></span>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <b>Users</b>
+        <ul class="demo-list-item mdl-list">
+            <li class="mdl-list__item" *ngFor="let user of users | async; let index = index">
+                <span class="mdl-list__item-primary-content">
+                    {{index+1}}. {{ user.name }}
+                </span>
+            </li>
+        </ul>
+    </div>     
+    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                Task<input  class="mdl-textfield__input" type="text" id="task" value={{assignTaskName?.name}}>
+                
+        </div> 
+        <button id="select-task-menu" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect"
+            for="select-task-menu"> 
+            <li *ngFor="let task of tasks | async; let last = last;" (click)="assignTask(task.title, task.$key)"><b>{{task.title}}</b><hr *ngIf="!last" style="margin: 4px 0"></li>
+        </ul>
+        To
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                User<input class="mdl-textfield__input" type="text" id="user" value={{assignUserName?.name}}>
+                
+        </div> 
+        <button id="select-language-menu" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect"
+            for="select-language-menu"> 
+            <li *ngFor="let user of users | async; let last = last;" (click)="assignUser(user.name, user.$key)"><b>{{user.name}}</b><hr *ngIf="!last" style="margin: 4px 0"></li>
+        </ul>
+        <button class="mdl-button mdl-js-button mdl-button--raised" (click)="assign()">
+            Assign
+        </button>
+    </div>
+</div> 
+  
