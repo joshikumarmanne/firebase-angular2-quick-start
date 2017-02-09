@@ -6,7 +6,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/joshikumarmanne/firebaseAngular2Basic.git
+git clone https://github.com/joshikumarmanne/firebase-angular2-quick-start.git
 # Go into the repository
 cd firebaseAngular2Basic
 # Install dependencies
