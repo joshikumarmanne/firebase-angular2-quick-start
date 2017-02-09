@@ -1,4 +1,4 @@
-# firebaseAngular2-quick-start
+# firebase-angular2-quick-start
 This is a minimal angular2 application using firebase, webpack and use example json (example.josn) as your data in firebase.
 This application is based on workflow management(We will assign tasks to users/employees)
 
